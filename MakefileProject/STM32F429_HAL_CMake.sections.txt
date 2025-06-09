@@ -1,0 +1,45 @@
+
+STM32F429_HAL_CMake.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .isr_vector   000001ac  08000000  08000000  00001000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .text         000003ac  080001ac  080001ac  000011ac  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .rodata       00000024  08000558  08000558  00001558  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .ARM.extab    00000000  0800057c  0800057c  00002008  2**0
+                  CONTENTS, READONLY
+  4 .ARM          00000000  0800057c  0800057c  00002008  2**0
+                  CONTENTS, READONLY
+  5 .preinit_array 00000000  0800057c  0800057c  00002008  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .init_array   00000008  0800057c  0800057c  0000157c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .fini_array   00000004  08000584  08000584  00001584  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  8 .data         00000008  20000000  08000588  00002000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .ccmram       00000000  10000000  10000000  00002008  2**0
+                  CONTENTS
+ 10 .bss          000001b4  20000008  20000008  00002008  2**2
+                  ALLOC
+ 11 ._user_heap_stack 00000604  200001bc  200001bc  00002008  2**0
+                  ALLOC
+ 12 .ARM.attributes 00000030  00000000  00000000  00002008  2**0
+                  CONTENTS, READONLY
+ 13 .debug_info   000005a8  00000000  00000000  00002038  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_abbrev 00000191  00000000  00000000  000025e0  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 15 .debug_aranges 00000040  00000000  00000000  00002771  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 16 .debug_line   000002af  00000000  00000000  000027b1  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 17 .debug_str    000002e9  00000000  00000000  00002a60  2**0
+                  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 18 .comment      00000045  00000000  00000000  00002d49  2**0
+                  CONTENTS, READONLY
+ 19 .debug_frame  00000248  00000000  00000000  00002d90  2**2
+                  CONTENTS, READONLY, DEBUGGING, OCTETS

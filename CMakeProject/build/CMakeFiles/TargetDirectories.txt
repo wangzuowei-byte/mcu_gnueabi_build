@@ -1,0 +1,3 @@
+/work/platfrom/mcu/CMakeProject/build/CMakeFiles/STM32F429_HAL_CMake.elf.dir
+/work/platfrom/mcu/CMakeProject/build/CMakeFiles/edit_cache.dir
+/work/platfrom/mcu/CMakeProject/build/CMakeFiles/rebuild_cache.dir
