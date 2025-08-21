@@ -19,7 +19,7 @@ BUILD_DIR = build
 C_SOURCES = \
     Src/main.c \
     Src/syscalls.c \
-	Inc/system_stm32f4xx.c
+        Inc/system_stm32f4xx.c
 
 ASM_SOURCES = \
     startup/startup_stm32f429zitx.s
@@ -43,23 +43,25 @@ OBJS     = $(C_OBJS) $(ASM_OBJS)
 all: $(TARGET).elf $(TARGET).hex $(TARGET).bin sections
 
 $(TARGET).elf: $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $^
-	$(SIZE) $@
+        $(CC) $(LDFLAGS) -o $@ $^
+        $(SIZE) $@
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+        $(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 %.o: %.s
-	$(AS) $(ASFLAGS) -c $< -o $@
+        $(AS) $(ASFLAGS) -c $< -o $@
 
 %.hex: %.elf
-	$(OBJCOPY) -O ihex $< $@
+        $(OBJCOPY) -O ihex $< $@
 
 %.bin: %.elf
-	$(OBJCOPY) -O binary $< $@
+        $(OBJCOPY) -O binary $< $@
 
 sections: $(TARGET).elf
-	$(OBJDUMP) -h $< > $(TARGET).sections.txt
+        $(OBJDUMP) -h $< > $(TARGET).sections.txt
 
 clean:
-	rm -f $(C_OBJS) $(ASM_OBJS) $(TARGET).elf $(TARGET).hex $(TARGET).bin $(TARGET).map $(TARGET).sections.txt
+        rm -f $(C_OBJS) $(ASM_OBJS) $(TARGET).elf $(TARGET).hex $(TARGET).bin $(TARGET).map $(TARGET).sections.txt
+
+		
